@@ -1,0 +1,8 @@
+# Exclude the JetBrains PhpStorm project directory from version control
+.idea/
+
+# Exclude Visual Studio directory
+.vscode/
+
+# Local history for Visual Studio Code
+.history/
