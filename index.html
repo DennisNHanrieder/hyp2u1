@@ -24,9 +24,36 @@
 
     <!-- TODO: Since we need the data from the <textarea>, it needs a "name" attribute as well. -->
 
-    <!-- TODO: Insert the text from "testring.txt" between your <textarea> tags, so it's there for testing -->
+    <!-- TODO: Insert the text from "teststring.txt" between your <textarea> tags, so it's there for testing -->
 
     <!-- TODO: You can use (the included) Bootstrap classes to format everything visually if you want. -->
+
+    <form action="moneycounter.php" id="moneyForm" method="post">
+        <label for="message">Enter your message:</label><br>
+        <textarea name = "message" id = "message" rows="20" cols="120">
+            50.30 EUR is valid at the beginning of the text.
+            10.00 EUR	(with a tab after EUR) is also valid.
+            23.45 EUR, 3 EUR or 12.- EUR in the middle of the text is valid.
+            So is 0.70 EUR.
+
+            Invalid are: 03.17 EUR (leading 0),
+            .56 EUR (no digit before the decimal separator),
+            16.0056 EUR (more than 2 decimal places),
+            a10.00 EUR (no space before the digit),
+            11,00 EUR (the decimal separator is a period, not a comma),
+            7EUR (no blank between the digits and EUR),
+            13.17 eur (EUR should be in UPPERCASE) and 17.7 EUR (needs exactly two decimal places).
+            15.89EUR has no space after EUR.
+            17.37 doesn't have EUR and could be just any number.
+
+            All 7 valid amounts of money should sum up to 1000.
+            A valid amount is identified by " EUR " or " EUR," or " EUR." after a valid decimal number (\b) in the middle of the text.
+            At the end of the text " EUR" is also valid. Linebreaks belong to the category of space characters.
+
+            Finally, at the end of the text, we add the remaining valid 900.55 EUR
+        </textarea><br>
+        <button type="submit">Submit</button>
+    </form>
 </div>
 </body>
 </html>
