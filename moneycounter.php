@@ -27,6 +27,9 @@
     // TODO: Make your regex more extensive until it finds a few amounts of money in the text.
     $pattern = "/^\d+(?:\.\d{2})?(?:.-)? EUR$/";
     preg_match_all($pattern, $message, $matches);
+    var_dump($matches);
+
+
     // TODO: Time to use the regex here in your code. Add a variable for the pattern and add it with a delimiter.
     // TODO: Run it on your input data. You need preg_match_all() because you need to find multiple occurrences of the pattern.
     // TODO: Be sure to add the 3rd parameter $matches so you can get the actual matched strings.
@@ -40,11 +43,10 @@
 
     // TODO: Last step: Return output.
     // TODO: Return the entered text and the total amount of money.
-    return $sumMoney;
+    //return $sumMoney; -> Kein return-Statement, sonst wird nichts angezeigt
     // TODO: To convert the line breaks from the <textarea> (\n) to HTML linebreaks (<br>), use nl2br().
     // TODO: Use number_format() to format the total sum with two decimal digits, "," as thousands separator and "." as the decimal separator.
-    number_format($sumMoney, ",", "." );
-    echo $sumMoney;
+    echo "<p>" . number_format($sumMoney, 2,".", "," ) . "</p>";
     echo $message;
     // TODO: After you got your first output (probably with an incorrect sum), fine-tune your regex until it matches everything as required.
     // TODO: TODO: You can use (the included) Bootstrap classes to format everything visually if you want.
