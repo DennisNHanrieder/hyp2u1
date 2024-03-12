@@ -30,20 +30,21 @@
 
     <form action="moneycounter.php" id="moneyForm" method="post">
         <label for="message">Enter your message:</label><br>
-        <textarea name="message" id="message" rows="20" cols="120">50.30 EUR is valid at the beginning of the text.
-10.00 EUR	(with a tab after EUR) is also valid.
-23.45 EUR, 3 EUR or 12.- EUR in the middle of the text is valid.
-So is 0.70 EUR.
+        <textarea name="message" id="message" rows="20" cols="120">
+            50.30 EUR is valid at the beginning of the text.
+            10.00 EUR	(with a tab after EUR) is also valid.
+            23.45 EUR, 3 EUR or 12.- EUR in the middle of the text is valid.
+            So is 0.70 EUR.
 
-Invalid are: 03.17 EUR (leading 0),
-.56 EUR (no digit before the decimal separator),
-16.0056 EUR (more than 2 decimal places),
-a10.00 EUR (no space before the digit),
-11,00 EUR (the decimal separator is a period, not a comma),
-7EUR (no blank between the digits and EUR),
-13.17 eur (EUR should be in UPPERCASE) and 17.7 EUR (needs exactly two decimal places).
-15.89 EURhas no space after EUR.
-17.37 doesn't have EUR and could be just any number.
+            Invalid are: 03.17 EUR (leading 0),
+            .56 EUR (no digit before the decimal separator),
+            16.0056 EUR (more than 2 decimal places),
+            a10.00 EUR (no space before the digit),
+            11,00 EUR (the decimal separator is a period, not a comma),
+            7EUR (no blank between the digits and EUR),
+            13.17 eur (EUR should be in UPPERCASE) and 17.7 EUR (needs exactly two decimal places).
+            15.89 EURhas no space after EUR.
+            17.37 doesn't have EUR and could be just any number.
 
 All 7 valid amounts of money should sum up to 1000.
 A valid amount is identified by " EUR " or " EUR," or " EUR." after a valid decimal number (\b) in the middle of the text.
